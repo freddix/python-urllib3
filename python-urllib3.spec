@@ -2,12 +2,12 @@
 
 Summary:	HTTP library with thread-safe connection pooling, file post, and more
 Name:		python-%{module}
-Version:	1.7
+Version:	1.7.1
 Release:	1
 License:	MIT
 Group:		Development/Languages/Python
 Source0:	https://pypi.python.org/packages/source/u/urllib3/%{module}-%{version}.tar.gz
-# Source0-md5:	a055b7f51b0c9ffadd7172c21b2885a3
+# Source0-md5:	8b05bb2081379fe3c332542aa7c172f3
 URL:		http://urllib3.readthedocs.org/
 BuildRequires:	python-modules
 BuildRequires:	python3-modules
@@ -76,9 +76,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.rst CONTRIBUTORS.txt README.rst
 %{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
 
 %files -n python3-urllib3
 %defattr(644,root,root,755)
 %doc CHANGES.rst CONTRIBUTORS.txt README.rst
 %{py3_sitescriptdir}/%{module}
+%{py3_sitescriptdir}/%{module}-%{version}-py*.egg-info
 
